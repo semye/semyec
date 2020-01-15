@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+project(semyec C)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(.)
+
+add_executable(struct1 struct1.c)
+add_executable(enum1 enum1.c)
+add_executable(pointer pointer.c)
+add_executable(str stringdemo.c)
+add_executable(inout inout.c)
+add_executable(file file1.c)
+add_executable(cdefined cdefined.c)
+add_executable(cerror cerror.c)
+add_executable(sort sort.c)
+add_executable(malloc1 malloc1.c)
+add_executable(argc argc.c)
+add_executable(datatype datatype.c)
+add_executable(char1 char1.c)
+add_executable(stdlibdemo stdlibdemo.c)
+add_executable(timedemo timedemo.c)
+add_executable(bitc bit1.c)
