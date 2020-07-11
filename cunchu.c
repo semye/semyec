@@ -15,6 +15,8 @@
 //extern 修饰符通常用于当有两个或多个文件共享相同的全局变量或函数的时候
 
 
+#include <stdio.h>
+
 /*
  * 四种存储类
  * auto 所有局部变量的默认存储类 默认保存在RAM中
@@ -22,19 +24,17 @@
  * static 可修饰局部变量和全局变量  在修饰局部变量时，多次调用会无效
  * extern 提供一个全局变量的引用
  */
-void four_() {
+void fun() {
     {
         int month;
         auto int year;
     }
-    int day;
-
+    int day = 2;
     printf("%d\n", day);
+    register int *ye;
+    //   不能对 register的局部变量使用& 因为没有内存位置
+    // printf("%p\n", &ye);
 
-    {
-        register int *ye;
-//   不能对 register的局部变量使用& 因为没有内存位置    printf("%p\n", &ye);
-    }
 
     static int ss = 9;
     printf("%d\n", ss);
@@ -43,12 +43,10 @@ void four_() {
 }
 
 
-
-
-
 extern int yesheng; //extern 提供全局的引用
 
 
 int main() {
+    fun();
     return 0;
 }

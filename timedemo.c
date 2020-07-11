@@ -18,5 +18,11 @@ time_t get_current_time() {
 
 int main() {
     get_current_time();
+    size_t abc = 1;
+    clock_t clock1 = clock();
+    time_t is = time(NULL);
+    printf("%lu\n", abc);
+    printf("%lu\n", clock1);
+    printf("%lu\n", is);
     return 0;
 }

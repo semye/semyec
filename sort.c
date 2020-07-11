@@ -2,7 +2,7 @@
 // Created by yesheng on 2018/10/30.
 // 算法
 //
-#include "stdio.h"
+#include <stdio.h>
 
 
 void bubble_sort(int array[], int num) {

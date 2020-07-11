@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 
-/*
+/**
  * 打印ASCII码
  */
 void ascii() {
