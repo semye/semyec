@@ -1,8 +1,3 @@
-//
-// Created by yesheng on 2018/10/30.
-//
-
-
 #include <stdio.h>
 
 /**
@@ -14,6 +9,7 @@ void ascii() {
     }
 }
 
-void main() {
+int main() {
     ascii();
+    return 0;
 }
