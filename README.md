@@ -1,6 +1,6 @@
-# semyec
-c 学习
-算法
+# C语言学习笔记
+
+## 算法
 
 排序算法
 
@@ -14,79 +14,52 @@ c 学习
 
 [https://zh.cppreference.com/w/c/header]
 
-C 标准库头文件
+## C语言标准库头文件
 
-assert.h
-
-断言
-
-ctype.h
-
-
-
-errno.h
-
-limits.h
-
-locale.h
-
-math.h
-
-setjmp.h
-
-signal.h
-
-stdarg.h
-
-stddef.h
-
-stdio.h
-
-stdlib.h
-
-string.h
-
-time.h
-
-float.h
+- assert.h
+- ctype.h
+- errno.h
+- limits.h
+- locale.h
+- math.h
+- setjmp.h
+- signal.h
+- stdarg.h
+- stddef.h
+- stdio.h
+- stdlib.h
+- string.h
+- time.h
+- float.h
 
 95起
 
-iso646.h
-
-wchar.h
-
-wctype.h
+- iso646.h
+- wchar.h
+- wctype.h
 
 99起
 
-complex.h
-
-fenv.h
-
-inttypes.h
-
-stdbool.h
-
-stdint.h
-
-tgmath.h
+- complex.h
+- fenv.h
+- inttypes.h
+- stdbool.h
+- stdint.h
+- tgmath.h
 
 11起
 
-stdalign.h
+- stdalign.h
+- stdatomic.h
+- stdnoreturn.h
+- threads.h
+- uchar.h
 
-stdatomic.h
+## 函数调用
 
-stdnoreturn.h
-
-threads.h
-
-uchar.h
-
-# 函数调用
-传值调用
-引用调用  使用指针
+- 传值调用
+- 引用调用
+- 使用指针
 
 
 
