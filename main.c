@@ -14,6 +14,8 @@
 #include <float.h>
 #include <time.h>
 
+#define READ_BUFF 100
+
 
 /**
  * 结构体 通常在头文件中定义结构体
@@ -166,7 +168,7 @@ void errorstr() {
     FILE *pf = fopen("unexist.txt", "rb");
     if (pf == NULL) {
         //stderr 按输出打印到屏幕
-        fprintf(stderr, "%s", strerror(errno));
+        fprintf(stderr, "%s\n", strerror(errno));
     }
 }
 
@@ -214,7 +216,6 @@ void abs_() {
 void div_() {
     //求n/m，商和余数分别存放到结果结构的对应成员里
     div_t div1 = div(1, 2);
-
     printf("1/2  商为===>%d,余数为===>%d\n", div1.quot, div1.rem);
 }
 
@@ -344,13 +345,6 @@ void def() {
     printf("当前行数:%d\n", __LINE__);
 }
 
-void printerror() {
-    FILE *pf = fopen("unexist.txt", "rb");
-    if (pf == NULL) {
-        //stderr 按输出打印到屏幕
-        fprintf(stderr, "%s\n", strerror(errno));
-    }
-}
 // c语言中0为假 非0为真
 // 运算符
 // 算术运算符 + - * / % ++ --
@@ -913,8 +907,6 @@ void open_file_use() {
 
 }
 
-#define READ_BUFF 100
-
 
 void copy_file(char *filename, char *copy_filename) {
     FILE *fp1, *fp2;
@@ -1009,9 +1001,6 @@ time_t get_current_time() {
 //argc 参数个数
 //argv[0] 存储程序的名称
 int main(int argc, char *argv[]) {
-    cpystr();
-    struct1();
-    printerror();
 //    unsigned char a = '%';
 //    printf("%d\n", a);
 //    fun1();
