@@ -32,32 +32,9 @@
 // 派生类型 指针类型、数组类型、结构类型、共用体类型和函数类型
 //
 
-#include <stdio.h>
-#include <float.h>
 
-// 整形类型
-void fun1() {
-    printf("char size %lu\n", sizeof(char));
-    printf("unsigned char size %lu\n", sizeof(unsigned char));
-    printf("signed char size %lu\n", sizeof(signed char));
-    printf("int size %lu\n", sizeof(int));
-    printf("unsigned int size %lu\n", sizeof(unsigned int));
-    printf("short size %lu\n", sizeof(short));
-    printf("unsigned short size %lu\n", sizeof(unsigned short));
-    printf("long size %lu\n", sizeof(long));
-    printf("unsigned long size %lu\n", sizeof(unsigned long));
-}
 
-// 浮点类型
-// %E 为以指数形式输出单、双精度实数
-void fun2() {
-    printf("float size %lu\n", sizeof(float));
-    printf("double size %lu\n", sizeof(double));
-    printf("long double size %lu\n", sizeof(long double));
-    printf("float 最小值: %E\n", FLT_MIN);
-    printf("float 最大值: %E\n", FLT_MAX);
-    printf("精度值: %d\n", FLT_DIG);
-}
+
 
 const int b = 1;//定义常量
 
@@ -87,7 +64,6 @@ void type_() {
 }
 
 int main() {
-    fun1();
     int a = 0;
     printf("%d\n", a);
     printf("%d\n", b);
