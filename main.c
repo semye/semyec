@@ -138,17 +138,17 @@ void collstr() {
 
 /**
  * strcpy 函数的使用 复制字符串
+ * 把str1的内容复制到str2中
+ * str2的大小必须大于等于str1的大小
  */
 void cpystr() {
-    char hello1[] = "hello world!";
-    size_t size = sizeof(hello1);
-    printf("%zu\n", size);
-    char hello2[size];
-    strcpy(hello2, hello1);
-    printf("hello1的内容:%s\n", hello1);
-    printf("hello1的内存地址:%p\n", &hello1);
-    printf("hello2的内容:%s\n", hello2);
-    printf("hello2的内存地址:%p\n", &hello2);
+    char str1[] = "hello world!";
+    char str2[100];
+    strcpy(str2, str1);
+    printf("str1的内容:%s\n", str1);
+    printf("str1的内存地址:%p\n", &str1);
+    printf("str2的内容:%s\n", str2);
+    printf("str2的内存地址:%p\n", &str2);
 }
 
 //strcspn
