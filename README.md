@@ -3,18 +3,18 @@
 ## 算法
 
 排序算法
-
-冒泡排序
-选择排序
-插入排序
+- 冒泡排序
+- 选择排序
+- 插入排序
 
 查找算法
 
-常用函数的使用
 
-[https://zh.cppreference.com/w/c/header]
+
 
 ## C语言标准库头文件
+
+[https://zh.cppreference.com/w/c/header]
 
 - assert.h
 - ctype.h
