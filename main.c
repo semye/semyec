@@ -31,7 +31,7 @@ typedef struct Book {
 /**
  * 结构体的使用
  */
-void fun3() {
+void struct1() {
     struct Book book1;
     strcpy(book1.title, "c 语言");
     strcpy(book1.author, "c 语言1");
@@ -136,17 +136,19 @@ void collstr() {
 }
 
 
-//strcpy 函数的使用 复制字符串
+/**
+ * strcpy 函数的使用 复制字符串
+ */
 void cpystr() {
     char hello1[] = "hello world!";
     size_t size = sizeof(hello1);
     printf("%zu\n", size);
     char hello2[size];
     strcpy(hello2, hello1);
-    printf("%s\n", hello1);
-    printf("%p\n", &hello1);
-    printf("%s\n", hello2);
-    printf("%p\n", &hello2);
+    printf("hello1的内容:%s\n", hello1);
+    printf("hello1的内存地址:%p\n", &hello1);
+    printf("hello2的内容:%s\n", hello2);
+    printf("hello2的内存地址:%p\n", &hello2);
 }
 
 //strcspn
@@ -346,7 +348,7 @@ void printerror() {
     FILE *pf = fopen("unexist.txt", "rb");
     if (pf == NULL) {
         //stderr 按输出打印到屏幕
-        fprintf(stderr, "%s", strerror(errno));
+        fprintf(stderr, "%s\n", strerror(errno));
     }
 }
 // c语言中0为假 非0为真
@@ -512,7 +514,6 @@ void fun51() {
 }
 
 
-
 void bubble_sort(int array[], int num) {
     int temp;
     for (int j = 0; j < num - 1; j++) {
@@ -617,9 +618,6 @@ void sort3() {
 }
 
 
-
-
-
 /*
  * 变量的值改变,内存地址不会改变,所以可以操作指针来改变变量的值
  * 定义指针时,如果没有确切的地址定义成空指针是一个很好的习惯
@@ -715,7 +713,7 @@ int maxXy(int x, int y) {
 //函数指针的使用
 int fun8() {
     //定义一个函数指针
-    int (*p)(int, int)=&maxXy;
+    int (*p)(int, int) =&maxXy;
     //通过函数指针调用函数
     int s = p(1, 2);
     printf("%d\n", s);
@@ -936,9 +934,6 @@ void copy_file(char *filename, char *copy_filename) {
 }
 
 
-
-
-
 //getchar 从键盘获取字符
 //putchar 显示到屏幕
 void fun999() {
@@ -1011,23 +1006,20 @@ time_t get_current_time() {
 }
 
 
-
-
-
-
 //argc 参数个数
 //argv[0] 存储程序的名称
 int main(int argc, char *argv[]) {
+    cpystr();
+    struct1();
     printerror();
-    fun3();
-    unsigned char a = '%';
-    printf("%d\n", a);
-    fun1();
-    fun2();
-    printf("参数个数:%d\n", argc);
-    for (int i = 0; i < argc; i++) {
-        printf("argv[%d]:%s\n", i, argv[i]);
-    }
-    printAscii();
+//    unsigned char a = '%';
+//    printf("%d\n", a);
+//    fun1();
+//    fun2();
+//    printf("参数个数:%d\n", argc);
+//    for (int i = 0; i < argc; i++) {
+//        printf("argv[%d]:%s\n", i, argv[i]);
+//    }
+//    printAscii();
     return 0;
 }
