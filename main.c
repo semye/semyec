@@ -1002,7 +1002,7 @@ time_t get_current_time() {
 //argv[0] 存储程序的名称
 int main(int argc, char *argv[]) {
     printf("hello %s %s world!", "semye", "haha");
-//    unsigned char a = '%';
+    unsigned char a = '%';
 //    printf("%d\n", a);
 //    fun1();
 //    fun2();
