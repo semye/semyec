@@ -14,7 +14,7 @@
 
 ## C语言标准库头文件
 
-[https://zh.cppreference.com/w/c/header]
+[头文件文档](https://zh.cppreference.com/w/c/header)
 
 - assert.h
 - ctype.h
