@@ -711,6 +711,7 @@ int fun8() {
     //通过函数指针调用函数
     int s = p(1, 2);
     printf("%d\n", s);
+    return 0;
 }
 
 void callyou(void) {
@@ -726,6 +727,7 @@ void callexecute(void *p()) {
 int fun9() {
     void (*p) = &callyou;
     callexecute(p);
+    return 0;
 }
 
 /*
