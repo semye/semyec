@@ -262,15 +262,16 @@ void random_(time_t time_t) {
 
 /*
  * 位运算符的使用
+ * 都是转成二进制进行计算
  * & | ^ ~  <<  >>
  */
 void bit_() {
 
     //&  位上两个都是1则该位为1 否则为0
-    printf("%d\n", 0 & 0);
-    printf("%d\n", 0 & 1);
-    printf("%d\n", 1 & 0);
-    printf("%d\n", 1 & 1);
+    printf("0 & 0 %d\n", 0 & 0);
+    printf("0 & 1 %d\n", 0 & 1);
+    printf("1 & 0 %d\n", 1 & 0);
+    printf("1 & 1 %d\n", 1 & 1);
 
     //|
 
@@ -279,16 +280,23 @@ void bit_() {
 
 
     //~取反
-    printf("%d\n", 63);
-    printf("%d\n", ~63);
+    printf("1:%d\n", 1);
+    printf("~1:%d\n", ~1);
 
-    //<<
+    // << 左移运算  把1转成二进制,左移
+    printf("1 << 1 %d\n", 1 << 1);
+    printf("1 << 2 %d\n", 1 << 2);
+    printf("1 << 3 %d\n", 1 << 3);
 
-    printf("%d\n", 63 << 2);
+    printf("0 << 30 %d\n", 0 << 30);
+    printf("1 << 30 %d\n", 1 << 30);
+    printf("2 << 30 %d\n", 2 << 30);
+    printf("3 << 30 %d\n", 0x3 << 30);
+    printf("取反3 << 30 %d\n", ~(0x3 << 30));
 
-    //>>
 
-    printf("%d\n", 63 >> 2);
+    // >> 右移运算  把1转成二进制 右移
+    printf("1 >> 2 %d\n", 1 >> 2);
 
 }
 
@@ -1013,5 +1021,7 @@ int main(int argc, char *argv[]) {
 //        printf("argv[%d]:%s\n", i, argv[i]);
 //    }
 //    printAscii();
+
+    bit_();
     return 0;
 }
