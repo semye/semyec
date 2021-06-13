@@ -66,3 +66,5 @@ gcc main.c
 ```
 gcc main.c semye.c
 ```
+
+-c 生成object 文件
