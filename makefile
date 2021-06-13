@@ -1,4 +1,4 @@
-target:
+semye:main.c semye.c
 
 prerequisites:
 
