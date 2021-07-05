@@ -1,4 +1,6 @@
 #include <stdio.h>
-void test1(){
-    printf("hello world!!");
+#include "semye.h"
+
+void test1() {
+    printf("hello world!!\n");
 }

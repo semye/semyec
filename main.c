@@ -10,9 +10,9 @@
 #include <string.h>
 #include <memory.h>
 #include <stdlib.h>
-#include <stdio.h>
 #include <float.h>
 #include <time.h>
+#include "semye.h"
 
 #define READ_BUFF 100
 
@@ -1011,6 +1011,7 @@ time_t get_current_time() {
 //argc 参数个数
 //argv[0] 存储程序的名称
 int main(int argc, char *argv[]) {
+    test1();
     printf("hello %s, %s world!\n", "semye", "haha");
     unsigned char a = '%';
 //    printf("%d\n", a);
