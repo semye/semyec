@@ -8,3 +8,7 @@
 #endif //SEMYEC_SEMYE_H
 
 void test1();
+
+void fun1();
+
+void fun2();
