@@ -45,14 +45,7 @@ void struct1() {
 }
 
 
-/**
- * 打印ASCII码
- */
-void printAscii() {
-    for (int i = 0; i < 127; ++i) {
-        printf("%c\n", i);
-    }
-}
+
 
 
 
@@ -491,62 +484,7 @@ void fun51() {
 }
 
 
-void bubble_sort(int array[], int num) {
-    int temp;
-    for (int j = 0; j < num - 1; j++) {
-        for (int i = 0; i < num - 1 - j; i++) {
-            if (array[i] > array[i + 1]) {
-                //交换两个数字的位置
-                temp = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = temp;
-            }
-        }
-    }
 
-    for (int k = 0; k < num; k++) {
-        printf("%d ", array[k]);
-    }
-}
-
-/*
- * 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，
- * 然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。
- * 以此类推，直到所有元素均排序完毕。
- */
-void selection_sort(int array[], int num) {
-    for (int i = 0; i < num - 1; i++) {
-        int m = i;
-        for (int j = i + 1; j < num; j++) {
-            if (array[j] < array[m]) {
-                m = j;
-            }
-        }
-        int temp = array[m];
-        array[m] = array[i];
-        array[i] = temp;
-    }
-    for (int k = 0; k < num; k++) {
-        printf("%d ", array[k]);
-    }
-}
-
-
-/*
- * 插入排序
- */
-void insertion_sort(int array[], int num) {
-    for (int i = 1; i < num; i++) {
-        for (int j = i; j > 0 && array[j] < array[j - 1]; j--) {
-            int temp = array[j];
-            array[j] = array[j - 1];
-            array[j - 1] = temp;
-        }
-    }
-    for (int k = 0; k < num; k++) {
-        printf("%d ", array[k]);
-    }
-}
 
 /*
  * 第一步：申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列
@@ -723,14 +661,6 @@ void swapp(int *p1, int *p2) {
 }
 
 
-/*
- * 值交换
- */
-void swapv(int v1, int v2) {
-    int temp = v1;
-    v1 = v2;
-    v2 = temp;
-}
 
 //指向数组的指针
 void fun() {
@@ -992,6 +922,18 @@ int main(int argc, char *argv[]) {
     fun1();
     //打印浮点型
     fun2();
+
+    printAscii();
+
+    int aa=10;
+    int bb=11;
+    printf("交换前的aa :%d\n",aa);
+    printf("交换前的bb :%d\n",bb);
+    swapv(aa,bb);
+    printf("aa :%d\n",aa);
+    printf("bb :%d\n",bb);
+
+    errorstr();
 
 
     unsigned char a = '%';
